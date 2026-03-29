@@ -118,12 +118,46 @@
       color: var(--muted);
     }
 
+    .hero-top,
     .hero-grid,
     .stats,
     .shopping-grid,
     .notes-grid,
     .serve-grid {
       display: grid;
+    .hero-top {
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      max-width: 640px;
+    }
+
+    .hero-photo-frame {
+      margin: 0;
+      background: rgba(15, 23, 42, 0.78);
+      border: 1px solid rgba(56, 189, 248, 0.18);
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+    }
+
+    .hero-photo {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .hero-photo-caption {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
       gap: 18px;
     }
 
@@ -446,6 +480,7 @@
     }
 
     @media (max-width: 820px) {
+      .hero-top,
       .hero-grid,
       .stats {
         grid-template-columns: 1fr;
@@ -532,14 +567,31 @@
 <body>
   <div class="wrap">
     <section class="hero">
-      <div class="eyebrow">Meal Prep Summary</div>
-      <h1>Greek Yogurt Chicken Salad for 8 Meals</h1>
-      <p class="lede">
-        A meal-prep version of Well Plated's Greek Yogurt Chicken Salad scaled for
-        <strong>8 portions</strong>, which works well as <strong>4 lunches each for 2 people</strong>.
-        The goal is a fast, protein-forward prep with simple assembly, clean portioning,
-        and a 2-hour chill so the flavor comes together before the first meal.
-      </p>
+      <div class="hero-top">
+        <div class="hero-copy">
+          <div class="eyebrow">Meal Prep Summary</div>
+          <h1>Greek Yogurt Chicken Salad for 8 Meals</h1>
+          <p class="lede">
+            A meal-prep version of Well Plated's Greek Yogurt Chicken Salad scaled for
+            <strong>8 portions</strong>, which works well as <strong>4 lunches each for 2 people</strong>.
+            The goal is a fast, protein-forward prep with simple assembly, clean portioning,
+            and a 2-hour chill so the flavor comes together before the first meal.
+          </p>
+        </div>
+
+        <figure class="hero-photo-frame">
+          <img
+            class="hero-photo"
+            src="https://www.wellplated.com/wp-content/uploads/2017/04/Greek-Yogurt-Chicken-Salad.jpg"
+            alt="Greek yogurt chicken salad with grapes, celery, green onions, dill, and chicken in a bowl"
+            loading="eager"
+          >
+          <figcaption class="hero-photo-caption">
+            Original recipe photo from
+            <a href="https://www.wellplated.com/greek-yogurt-chicken-salad/" target="_blank" rel="noopener noreferrer">Well Plated</a>.
+          </figcaption>
+        </figure>
+      </div>
 
       <div class="stats">
         <div class="stat">
