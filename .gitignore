@@ -1,0 +1,3 @@
+# Ignore all project content for now. Remove or narrow these rules when you are ready to track files.
+**/*
+!.gitignore
